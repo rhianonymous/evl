@@ -141,6 +141,61 @@ module.exports = {
 
 
 
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+    /* revised two step payment process - DD + Card first   */
+
+    app.get('/examples/elements/evl-paymethod', function (req, res) {
+
+    var paymethod = req.query.paymethod;
+    var back = req.query.nextbacklink;
+    var regmark = req.query.regmark;
+    var kind = req.query.kind;
+
+    if (regmark == undefined) {
+        var defaultreg = 'CU57\xA0ABC';
+    } else {
+        var defaultreg = regmark;
+    }
+
+    var moment = require("moment");
+    var now = moment(new Date());
+    var today = now.format("D MMM YYYY");
+    
+    res.render('examples/elements/evl-renewal-type-' + paymethod, {'back' : back, 'defaultreg' : defaultreg, 'today' : today, 'kind' : kind});
+    
+    });
+
+    /* - - - - - - - - - - - - - - - - - - - - - - -  */
+    /* revised two step payment process - DD + Cards  */
+
+    app.get('/examples/elements/evl-paynum', function (req, res) {
+
+    var paynum = req.query.paynum;
+    var back = req.query.nextbacklink;
+    var regmark = req.query.regmark;
+    var kind = req.query.kind;
+
+    if (regmark == undefined) {
+        var defaultreg = 'CU57\xA0ABC';
+    } else {
+        var defaultreg = regmark;
+    }
+
+    var moment = require("moment");
+    var now = moment(new Date());
+    var today = now.format("D MMM YYYY");
+    
+    res.render('examples/elements/evl-period-check' + paynum, {'back' : back, 'defaultreg' : defaultreg, 'today' : today, 'kind' : kind});
+    
+    });
+
+
+
+
+
+
+
     /* - - - - - - - - - - - - - - - - - - - - - - - - - -  */
     /* Multiple routes from How to pay, renewal period page */
 
