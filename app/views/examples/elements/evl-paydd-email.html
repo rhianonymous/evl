@@ -46,15 +46,19 @@
 	</div>
 
 	<br clear="all">
+
+	<h1 class="heading-large" style="padding:0;margin:0 0 1em 0">Setting up a Direct Debit
+	</h1>
 		
 	
-	<h2 class="heading-medium" style="padding:0;margin:0 0 1em 0">Contact details
-	</h2>
+	<!-- <h2 class="heading-medium" style="padding:0;margin:0 0 1em 0">Details of person paying</h2> -->
+
+    <div class="body-container group">
 
 	<!--<h2 class="heading-medium" style="padding:0;margin:0 0 1em 0">Email address - required for direct debit
 	</h2>-->
 
-	<form id="bank" action="evl-3-flow" method="get" class="form" data-parsley-validate>
+	<form id="bank" action="evl-paydd-email-flow" method="get" class="form" data-parsley-validate>
 		<input type="hidden" name="nextlink" value="evl-paydd-bank">
 		<input type="hidden" name="nextbacklink" value="evl-paydd-address-playback">
 		<input type="hidden" name="regmark" value="{{defaultreg}}">
@@ -62,30 +66,40 @@
 		<input type="hidden" name="paynum" value="{{paynum}}">
 		<input type="hidden" name="kind" value="{{kind}}">
 
+    <div>
+        <label class="heading-small">Name of person paying </label>
+        <!--<p>If the vehicle keeper is different to the bank account holder</p> -->
+
+        <p>
+        <input id="payer" name="payer" type="payer" class="form-control input-large" style="text-transform:Capitalize" />
+        </p>
+
+
+    </div>
+
+
+  
+
+	
+
 
 
 		
 
 		<div class="form-group">
 
-<h2 class="heading-small" style="padding:0;margin:0 0 1em 0">Full name
+
+
+
+
+
+
+		<h2 class="heading-small" style="padding:0;margin:2em 0 0.1em 0">Email address - required for direct debit
 	</h2>
 
-	<p>
-      <input id="fullname" name="fullname" type="fullname" class="form-control input-large" />
-      
-    </p>
-
-
-
-
-
-		<h2 class="heading-small" style="padding:0;margin:0 0 1em 0">Email address - required for direct debit
-	</h2>
-
-		<div style="margin:1em 0 2em 0">
+		<div style="margin:0.1em 0 2em 0">
         
-	        <label class="heading-small" for="MainContent_txtEmailConfirmation" id="MainContent_lblbEmailConfirmationText">We send the Direct Debit schedule to this address</label>
+	        <label for="MainContent_txtEmailConfirmation" id="MainContent_lblbEmailConfirmationText">We send the Direct Debit schedule to this address</label>
 
 	       
 
@@ -93,7 +107,7 @@
 	        
 
 		    <p>
-		      <input id="email" name="email" type="email" class="form-control input-large" data-parsley-trigger="change" required data-parsley-required-message="You must provide an email so we can send your direct debit schedule" />
+		      <input id="email" name="email" type="email" value="{{email}}" class="form-control input-large" data-parsley-trigger="change" required data-parsley-required-message="You must provide an email so we can send your direct debit schedule" />
 		      
 		    </p>
 
@@ -136,7 +150,7 @@
 	        
 
 		    <p>
-		      <input id="email2" name="email2" type="email" class="form-control input-large" data-parsley-trigger="change" required data-parsley-required-message="You must provide an email so we can send your direct debit schedule" />
+		      <input id="email2" name="email2" type="email" value="{{email}}" class="form-control input-large" data-parsley-trigger="change" required data-parsley-required-message="You must provide an email so we can send your direct debit schedule" />
 		      
 		    </p>
 

@@ -81,6 +81,54 @@ module.exports = {
 
 
 
+
+
+
+    /* - - - - - - - - - - - - - - - - - - - -  */
+    /* Special flow for Paydd-email form ... passes payer name into default of account name */
+
+    app.get('/examples/elements/evl-paydd-email-flow', function (req, res) {
+
+    var next = req.query.nextlink;
+    var back = req.query.nextbacklink;
+    var regmark = req.query.regmark;
+    var email = req.query.email;
+    var kind = req.query.kind;
+    var paynum = req.query.paynum;
+    var payer = req.query.payer;
+
+    console.log(kind);
+    console.log(paynum);
+
+    if (regmark == undefined) {
+        var defaultreg = 'CU57\xA0ABC';
+    } else {
+        var defaultreg = regmark;
+    }
+
+
+    var moment = require("moment");
+    var now = moment(new Date());
+    var today = now.format("D MMM YYYY");
+
+
+    if (kind == 'v5c') {
+        if (paynum == 1) {
+            console.log(sorntax);
+            var sorntax = "Note: You are taxing a vehicle previously declared off the road within 2 days of the end of the current month.</p><p>Your vehicle tax will start on the <strong>1st of the next month</strong>. You are not taxed until then.";
+        }
+    }
+
+    res.render('examples/elements/' + next, {'back' : back, 'defaultreg' : defaultreg, 'paynum' : paynum, 'email' : email, 'today' : today, 'kind' : kind, 'sorntax' : sorntax, 'payer' : payer});
+    
+ 
+    });
+
+
+
+
+
+
     /* - - - - - - - - - - - - - - - - - - - -  */
     /* Pass nextpage for SORN FLOW */
 
@@ -186,7 +234,7 @@ module.exports = {
     var now = moment(new Date());
     var today = now.format("D MMM YYYY");
     
-    res.render('examples/elements/evl-period-check' + paynum, {'back' : back, 'defaultreg' : defaultreg, 'today' : today, 'kind' : kind});
+    res.render('examples/elements/evl-period-check' + paynum, {'back' : back, 'defaultreg' : defaultreg, 'today' : today, 'kind' : kind, 'paynum' : paynum});
     
     });
 
@@ -613,6 +661,7 @@ module.exports = {
       var regmark = req.query.regmark;
       var email = req.query.email;
       var kind = req.query.kind;
+      var paynum = req.query.paynum;
 
 
 
@@ -632,7 +681,7 @@ module.exports = {
         }
 
         console.log(results); 
-        res.render('examples/elements/evl-paydd-address.html', {'postcode' : postcode, 'result' : results, 'defaultreg' : defaultreg, 'email' : email, 'kind' : kind})
+        res.render('examples/elements/evl-paydd-address.html', {'postcode' : postcode, 'result' : results, 'defaultreg' : defaultreg, 'email' : email, 'kind' : kind, 'paynum' : paynum})
 
       });
 
@@ -653,6 +702,7 @@ module.exports = {
       var regmark = req.query.regmark;
       var email = req.query.email;
       var kind = req.query.kind;
+      var paynum = req.query.paynum;
 
 
 
@@ -672,7 +722,7 @@ module.exports = {
         }
 
         console.log(address); 
-        res.render('examples/elements/evl-paydd-address-playback.html', {'address' : address, 'defaultreg' : defaultreg, 'email' : email, 'kind' : kind})
+        res.render('examples/elements/evl-paydd-address-playback.html', {'address' : address, 'defaultreg' : defaultreg, 'email' : email, 'kind' : kind, 'paynum' : paynum})
 
       });
 
