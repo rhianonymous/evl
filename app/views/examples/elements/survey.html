@@ -1,0 +1,125 @@
+  {{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+
+    <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/selection-buttons.js"></script>
+
+
+{{/head}}
+
+
+{{$propositionHeader}}
+  {{>includes/govuk_evlprop}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+
+{{$content}}
+
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+<main id="content" role="main" style="padding-bottom:0">
+
+
+  
+
+
+
+  <form action="evl-3-flow" method="get" class="form">
+  <input type="hidden" name="nextlink" value="survey-thanks">
+
+
+
+
+    <div class="body-container group">
+
+    <h1 class="heading-large">Feedback</h1>
+
+    </div>
+
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+
+      <p style="margin-top:1em">
+      Overall, how did you feel about the service you received today?</p>
+
+    <div>
+    <label for="radio-inline-1" class="block-label">
+    <input id="radio-inline-1" type="radio"  name="rating" value="1">
+    Very satisfied
+    </label>
+
+    <label for="radio-inline-2" class="block-label">
+    <input id="radio-inline-2" type="radio"  name="rating" value="2">
+    Satisfied
+    </label>
+
+    <label for="radio-inline-3" class="block-label">
+    <input id="radio-inline-3" type="radio"  name="rating" value="3">
+    Neither satisfied or dissatisfied
+    </label>
+
+    <label for="radio-inline-4" class="block-label">
+    <input id="radio-inline-4" type="radio"  name="rating" value="4">
+    Dissatisfied
+    </label>
+
+    <label for="radio-inline-5" class="block-label">
+    <input id="radio-inline-5" type="radio"  name="rating" value="5">
+    Very dissatisfied
+    </label>
+    </div>
+
+    <br clear="all">
+
+
+      <p style="margin-top:2em">
+      How could we improve this service?</p>
+
+
+      <div>
+      <textarea rows="4" cols="50" name="comment" id="comments">
+      Your comments are anonymous
+      </textarea>
+      </div>
+
+
+      <div class="form-group" style="padding:1em 0">
+      <input type="submit" class="button" value="Send feedback">
+      </div>
+
+      <hr>
+
+
+      
+
+
+      </div>
+    </div>
+
+
+
+ 
+
+
+
+
+</form>
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

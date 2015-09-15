@@ -92,6 +92,7 @@ module.exports = {
     var next = req.query.nextlink;
     var back = req.query.nextbacklink;
     var regmark = req.query.regmark;
+    /* refresh the email var by taking the 2nd confirm field */
     var email = req.query.email2;
     var kind = req.query.kind;
     var paynum = req.query.paynum;
