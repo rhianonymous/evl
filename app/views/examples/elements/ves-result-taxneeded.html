@@ -1,0 +1,166 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+
+    <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/selection-buttons.js"></script>
+
+
+{{/head}}
+
+
+{{$propositionHeader}}
+  {{>includes/govuk_vesprop}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+
+{{$content}}
+
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+<link href="/public/stylesheets/numberplate.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+	
+<main id="wrapper" role="main">
+  <div id="content">
+    <div class="inner-block">
+		
+	<!--<a class="back-to-previous" href="transfer-4">Back <span class="visuallyhidden"> to the previous question</span></a> -->
+		
+		
+	<article>
+	
+	
+	
+	<h2 class="heading-large">
+	Registration number: <span class="reg-mark" style="margin-left:0.5em;font-size:110%">CU57 ABC</span>
+	</h2>
+	  
+	  
+	<!-- <div class="isValidTax">
+	<h2>&#10004; Taxed</h2>
+	<p>Expires: 01 August 2015</p>
+	</div> -->
+
+	<div class="isUntaxed">
+	<h2 class="heading-medium" style="margin:0">&#10008; Untaxed</h2>
+	<p>Expires: 01 October 2015</p>
+	</div>
+
+
+	<div class="isValidMot">
+	<h2 class="heading-medium" style="margin:0">&#10004; MOT</h2>
+	<p>Expires: 24 February 2015</p>
+	</div>
+
+
+	<div>
+	<p>You need to <a href="https://www.gov.uk/vehicle-tax">tax your vehicle</a> or tell us <a href="https://www.gov.uk/sorn-statutory-off-road-notification">it is off the road (SORN)</a>.
+	</p>
+
+
+
+
+	<div class="panel-indent" style="max-width:640px;border-left:10px solid #e0e0e0;padding:10px 20px;margin:12px 0">
+	<p>New keepers must get tax before using the vehicle. 
+	If you have taxed, made a SORN or had a MOT it can take up to 5 days for these details to be shown above. If you have a valid paper MoT certificate this is proof that the vehicle has been tested.</p>
+	</div>
+
+	<!--<ul class="ul-data">
+		<li><span>6 Month rate</span><strong>£126.50</strong></li>
+		<li><span>12 Month rate</span><strong>£230.00</strong></li>
+	</ul> *** only show the tax rate with the v5c login method ** -->
+
+
+	<h2 class="heading-medium">Vehicle details</h2>
+	
+	
+	
+<ul class="ul-data">
+	<li><span>Vehicle make</span><strong>TOYOTA</strong></li>
+	
+	<li><span>Date of first registration</span><strong>20 August 1997</strong></li>
+	
+	<li><span>Year of manufacture</span><strong>1997</strong></li>
+	
+	<li><span>Cylinder capacity (cc)</span><strong>2982cc</strong></li>
+	
+	<li><span>CO₂Emissions</span><strong>Not available</strong></li>
+	
+	<li><span>Fuel type</span><strong>HEAVY OIL</strong></li>
+	
+	<li><span>Export marker</span><strong>No</strong></li>
+	
+	<li><span>Vehicle status</span><strong>Tax not due</strong></li>
+	
+	<li><span>Vehicle colour</span><strong>GREEN</strong></li>
+	
+	<li><span>Vehicle type approval</span><strong>Not available</strong></li>
+	
+</ul>
+
+
+	<div class="panel-indent" style="max-width:640px;border-left:10px solid #e0e0e0;padding:10px 20px;margin:12px 0">
+	<h3 class="heading-medium" style="margin-top:0">Calculating the cost of vehicle tax</h3>
+	<p>
+	Please be aware that if you have taxed, made a SORN or had an MOT in the last 5 days these details may not have updated.
+	</p>
+	</div>
+	
+	
+
+	<details>
+	<summary role="button" aria-controls="details-content-0" tabindex="0" aria-expanded="true"><span class="summary">Incorrect details?</span></summary>
+	<div class="panel-indent" id="details-content-0" aria-hidden="false" style="display: block;">
+    <h2 class="visuallyhidden">Help with corrections to vehicle records</h2>
+	<p>If you think that the details on the vehicle record are incorrect please write to:</p>
+	<p>
+	CCG<br>
+	DVLA<br>
+	Swansea<br>
+	SA99 1BA
+	</p>
+
+	<p>
+	Please include the incorrect V5C registration certificate for amendment.
+	</p>
+	</div>
+	</details>
+	
+	
+	
+
+</article>		
+
+
+<form action="get" class="form" style="margin-top:2.5em">
+	<fieldset>
+		<div style="float:left;padding-right:1em">
+		  <input type="submit" class="button" value="Finish">
+		</div>
+	  
+
+		<div>
+		  <p><a href="transfer-3">
+			Search for another vehicle
+		</a></p>
+		</div>
+
+	</fieldset>
+</form>
+                    
+                
+
+    </div>
+  </div>
+</main>
+{{/content}}
+
+{{/govuk_template}}
