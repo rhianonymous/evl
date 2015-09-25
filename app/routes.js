@@ -51,9 +51,7 @@ module.exports = {
     var kind = req.query.kind;
     var paynum = req.query.paynum;
 
-    console.log(kind);
-    console.log(paynum);
-
+    
     if (regmark == undefined) {
         var defaultreg = 'CU57\xA0ABC';
     } else {
@@ -62,13 +60,15 @@ module.exports = {
 
 
     var moment = require("moment");
-    var now = moment(new Date());
+    var now = moment(new Date()); 
     var today = now.format("D MMM YYYY");
+   
+
+
 
 
     if (kind == 'v5c') {
         if (paynum == 1) {
-            console.log(sorntax);
             var sorntax = "Note: You are taxing a vehicle previously declared off the road within 2 days of the end of the current month.</p><p>Your vehicle tax will start on the <strong>1st of the next month</strong>. You are not taxed until then.";
         }
     }

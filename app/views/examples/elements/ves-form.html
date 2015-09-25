@@ -1,0 +1,113 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+
+    <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/selection-buttons.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/common.js"></script>
+
+
+
+
+{{/head}}
+
+
+
+
+{{$content}}
+
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+<main id="content" role="main">
+
+  <form action="evl-3-flow" method="get" style="margin-top:1.5em;margin-bottom:3em">
+  <input type="hidden" name="nextlink" value="ves-result-taxneeded">
+
+
+
+  <h1 class="form-title heading-large" style="margin:1.3em 0 0.75em 0;padding:0">
+    Details of the vehicle being checked
+  </h1>
+
+
+  <label class="form-label" for="regmark" style="padding-top:0.75em">
+  Vehicle registration (number plate)
+  <br>
+  <span style="color:grey">Example: CU57 ABC</label>
+  <input class="form-control" type="text" id="regmark" autocomplete="off" style="border:#ccc solid 2px;width:200px;border-radius:4px;line-height:1.6" size="10" >
+
+
+
+  <label class="form-label" for="make" style="padding-top:1.5em">
+  Vehicle make
+  <br>
+  <span style="color:grey">Example: AUDI</label>
+  <input class="form-control" type="text" id="make" autocomplete="off" style="border:#ccc solid 2px;width:280px;border-radius:4px;line-height:1.6" size="16" >
+
+  
+  <br clear="all">
+
+
+  <p style="margin-top:2.3em;max-width:600px">To check the vehicle tax rates and the date of the latest V5C, please enter the V5C reference number.</p>
+
+
+  <label class="form-label" for="v5c" style="padding-top:0.75em">
+  V5C document reference number (optional)
+  <br>
+  <span style="color:grey">An 11 digit number Example: 23583839874</span></label>
+  <input class="form-control" type="text" id="v5c" autocomplete="off" style="border:#ccc solid 2px;width:280px;border-radius:4px;line-height:1.6" size="16" >
+
+
+  <div style="padding:0.1em 0 1.3em 0">
+    <details style="" >
+      <summary role="button" aria-controls="details-content-0" tabindex="0" aria-expanded="true" style="padding-top:0.7em">
+        <span class="summary">Where to find this?</span>
+      </summary>
+      <div class="panel-indent js-hidden" id="details-content-0" aria-hidden="false" style="display:block;border-left:16px solid #ebebeb;padding:0 16px;margin:12px 0">
+
+
+          <p style="max-width:660px">The reference number is printed on the front of the V5C registration certificate. You should have received this from us shortly after acquiring your vehicle.</p>
+
+          <img src="/public/images/v5c-diagram.png" width="280" height="162" align="middle" style="padding:0 0 0.2em 0">
+
+
+      </div>
+    </details>
+  </div>
+
+
+
+
+
+
+
+  <!-- Primary buttons, secondary links -->
+  <div class="form-group" style="padding-top:1em">
+    <input type="submit" class="button" value="Continue">
+    
+
+  </div>
+
+</form>
+
+
+  <br clear="all">
+
+
+    
+
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}

@@ -1,0 +1,188 @@
+{{<govuk_template}}
+
+{{$head}}
+  {{>includes/elements_head}}
+
+    <script type="text/javascript" src="/public/javascripts/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/application.js"></script>
+
+    <script type="text/javascript" src="/public/javascripts/selection-buttons.js"></script>
+
+
+
+{{/head}}
+
+
+
+
+{{$propositionHeader}}
+  {{>includes/govuk_navigation_searchbox}}
+{{/propositionHeader}}
+
+{{$headerClass}}with-proposition{{/headerClass}}
+
+
+
+{{$content}}
+
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+<main id="content" role="main" class="vehicle-tax-start">
+  <div id="global-breadcrumb" class="header-context">
+    <nav role="navigation">
+      <ol class="group">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Driving and transport</a></li>
+        <li><a href="#">Vehicle tax and SORN</a></li>
+      </ol>
+    </nav>
+  </div>
+
+
+
+
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+      <h1 class="form-title heading-xlarge">
+      Get vehicle information from DVLA
+      </h1>
+
+
+      <p>Check online to find out what information the Driver and Vehicle Licensing Agency (DVLA) holds about a vehicle.</p>
+
+      <p>You’ll need the vehicle’s make and registration number.</p>
+
+      <ul class="list-bullet">
+        <li>the 11 digit reference number on your log book (V5C)</li>
+        <li>the 16 digit reference number on your vehicle tax renewal letter (V11)</li>
+        <li>the 12 digit reference number on your New Keeper Supplement (V5C/2) if you've just bought the vehicle</li>
+        <li>the 16 digit reference number on your last chance letter</li>
+        <li>the 11 digit reference number on your warning letter</li>
+      </ul>
+
+      <div class="help-notice">
+        <p>You must only use vehicle registration documents with your name on.</p>
+      </div>
+      
+
+
+      <form action="evl-3-flow" method="get" class="get-started" style="margin-top:1.5em;margin-bottom:3em">
+      <input type="hidden" name="nextlink" value="ves-form">
+      <input type="hidden" name="nextbacklink" value="start">
+
+        <input type="submit" value="Start now" class="button medium" role="button">
+      </form>
+
+
+
+      <h2 class="heading-medium" style="margin-top:0.75em">Before you start</h2>
+
+      <div class="panel-indent" style="max-width:640px;border-left:10px solid #e0e0e0;padding:10px 20px;margin:12px 0">
+      This is a ‘beta’ service - <a href="https://www.gov.uk/help/beta">find out what this means for you</a>.
+      </div>
+
+      <h2 class="heading-small" style="margin-top:0.75em">Information you can get</h2>
+
+      <p>You can find out various things about the vehicle, including:
+      <ul class="list-bullet">
+        <li>when its current vehicle tax expires</li>
+        <li>when its MOT expires</li>
+        <li>the date it was first registered</li>
+        <li>SORN status</li>
+        <li>colour</li>
+        <li>engine size</li>
+        <li>year of manufacture</li>
+        <li>CO2 emissions</li>
+        <li>current vehicle tax rate</li>
+      </ul>
+      </p>
+
+      <h2 class="heading-small" style="margin-top:0.75em">Information about registered keepers</h2>
+
+      <p>You must write to DVLA to request information about the <a href="https://www.gov.uk/request-information-from-dvla">current or previous registered keeper of a vehicle</a>.</p>
+
+
+     
+
+
+
+      <h2 class="heading-medium" style="margin-top:0.75em">Other ways to apply</h2>
+
+      <h2 class="heading-small" style="margin-top:0.75em">By phone</h2>
+
+
+      <p><a href="https://www.gov.uk/contact-the-dvla/y/vehicle-registration">Contact DVLA</a> to get the vehicle’s:
+      <ul>
+        <li>date of first registration</li>
+        <li>year of manufacture</li>
+        <li>engine size</li>
+        <li>CO2 emissions</li>
+        <li>colour</li>
+        <li>current vehicle tax rate</li>
+      </ul>
+      
+
+      <a href="/call-charges">Find out more about call charges</a></p>
+      
+
+
+
+
+    </div>
+
+
+    <div class="column-third" style=";margin-bottom:0.75em">
+      <nav class="popular-needs">
+
+        <h3 class="heading-medium" style="border-top:10px solid #005ea5;margin-top:0;padding-top:1em">Vehicle tax and SORN</h3>
+
+        <ul class="top-tasks">
+          <li><a href="start">Tax a vehicle</a></li>
+          <li><a href="/calculate-vehicle-tax-rates">Calculate vehicle tax rates</a></li>
+          <li><a href="/calculate-vehicle-tax-rates">Vehicle tax rate tables</a></li>
+          <li><a href="/apply-hgv-vehicle-licence-tax-disc-form-v85">Apply for <abbr title="Heavy goods vehicle">HGV</abbr> vehicle tax</a></li>
+          <li><a href="#">More</a></li>
+        </ul>
+
+        <h3 class="heading-medium" style="margin-top:0.75em">Driving and transport</h3>
+
+        <ul class="top-tasks">
+          <li><a href="#">Getting an <abbr title="Certificate of Road Worthiness">MOT</abbr></a></li>
+          <li><a href="#">More</a></li>
+        </ul>
+
+        <h3 class="heading-medium" style="margin-top:0.75em">Elsewhere on GOV.UK</h3>
+
+        <ul class="top-tasks">
+          <li><a href="#">Vehicle tax changes</a></li>
+        </ul>
+
+      </nav>
+    </div>
+
+  </div><!-- close gridrow -->
+
+
+
+ 
+
+ 
+
+  
+
+
+
+
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{$bodyEnd}}
+  {{>includes/elements_scripts}}
+{{/bodyEnd}}
+
+{{/govuk_template}}
